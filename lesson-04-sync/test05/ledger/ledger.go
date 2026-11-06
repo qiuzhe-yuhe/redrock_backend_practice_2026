@@ -13,7 +13,7 @@ type Ledger struct {
 	total    int
 }
 
-// Deposit 给 account 存入 amount。
+// Deposit 给 account 存入 identity。
 func (l *Ledger) Deposit(account string, amount int) {
 	if l.balances == nil {
 		l.balances = make(map[string]int)

@@ -46,7 +46,7 @@ module redrock/teaching-exercises
 `calc` 包在 `lesson-01-basics/test04/hello/calc/` 目录下，于是：
 
 ```go
-import "redrock/teaching-exercises/lesson-01-basics/test04/hello/calc"
+import "redrock/teaching-exercises/lesson-01-basics/test04/hello/identity"
 ```
 
 导进来以后，代码里用的名字是**文件开头 `package` 声明的那个名字**，也就是 `calc`：
@@ -72,7 +72,7 @@ calc.Add(1, 2)
 
 ```bash
 go test ./lesson-01-basics/test04/...
-go test -v ./lesson-01-basics/test04/hello/app
+go test -v ./lesson-01-basics/test04/hello/identity personxjy
 ```
 
 ## 评分点

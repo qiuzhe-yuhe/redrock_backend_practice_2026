@@ -93,7 +93,7 @@ func TestFetchTimesOutWithWrappedError(t *testing.T) {
 	defer cancel()
 
 	begin := time.Now()
-	got, err := c.Fetch(ctx, "user-42")
+	got, err := c.Fetch(ctx, "identity-42")
 	elapsed := time.Since(begin)
 
 	if elapsed > 500*time.Millisecond {
@@ -108,8 +108,8 @@ func TestFetchTimesOutWithWrappedError(t *testing.T) {
 	if !errors.Is(err, context.DeadlineExceeded) {
 		t.Fatalf("errors.Is(err, context.DeadlineExceeded) = false, err = %v；包装错误要用 %%w", err)
 	}
-	if !strings.Contains(err.Error(), "user-42") {
-		t.Fatalf("err = %q，错误信息里没有 key \"user-42\"；调用方看日志时要知道是哪一次请求超时", err)
+	if !strings.Contains(err.Error(), "identity-42") {
+		t.Fatalf("err = %q，错误信息里没有 key \"identity-42\"；调用方看日志时要知道是哪一次请求超时", err)
 	}
 }
 

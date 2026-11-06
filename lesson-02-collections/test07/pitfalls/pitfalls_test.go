@@ -20,10 +20,10 @@ func TestValidateReportsField(t *testing.T) {
 		user  pitfalls.User
 		field string
 	}{
-		{pitfalls.User{Name: "", Age: 18}, "name"},
+		{pitfalls.User{Name: "", Age: 18}, "identity"},
 		{pitfalls.User{Name: "Lin", Age: -1}, "age"},
 		{pitfalls.User{Name: "Lin", Age: 151}, "age"},
-		{pitfalls.User{Name: "", Age: 999}, "name"},
+		{pitfalls.User{Name: "", Age: 999}, "identity"},
 	}
 	for _, c := range cases {
 		err := pitfalls.Validate(c.user)

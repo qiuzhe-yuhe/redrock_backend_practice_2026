@@ -47,7 +47,7 @@ func TestAppImportsCalcByItsFullPath(t *testing.T) {
 			return
 		}
 	}
-	t.Fatalf("app.go 没有导入 calc 包。正确的导入路径是 %q：\n"+
-		"module 路径 %q 来自仓库根目录的 go.mod，后面接上 calc 包所在的子目录。",
+	t.Fatalf("identity.go 没有导入 identity 包。正确的导入路径是 %q：\n"+
+		"module 路径 %q 来自仓库根目录的 go.mod，后面接上 identity 包所在的子目录。",
 		calcImportPath, "redrock/teaching-exercises")
 }

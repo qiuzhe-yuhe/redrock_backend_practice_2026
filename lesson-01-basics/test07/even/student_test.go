@@ -12,7 +12,18 @@ import "testing"
 // 期望的行为：2 是偶数，3 不是，0 是偶数，-2 也是偶数。
 func TestIsEven(t *testing.T) {
 	// TODO: 删掉下面这行，写出你自己的检查。
-	//
+	if IsEven(2) != true {
+		t.Errorf("IsEven(2) = false, want true ")
+	}
+	if IsEven(3) != false {
+		t.Errorf("IsEven(3) = true, want false ")
+	}
+	if IsEven(0) != true {
+		t.Errorf("IsEven(0) = false, want true ")
+	}
+	if IsEven(-2) != true {
+		t.Errorf("IsEven(-1) = false, want true ")
+	}
 	// 一个检查长这样：
 	//
 	//	if !IsEven(2) {
@@ -20,5 +31,5 @@ func TestIsEven(t *testing.T) {
 	//	}
 	//
 	// t.Error 报告失败但继续往下跑，t.Fatal 报告失败并立刻结束这个测试。
-	t.Fatal("TODO: 完成 TestIsEven")
+
 }

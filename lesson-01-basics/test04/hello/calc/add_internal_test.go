@@ -7,8 +7,8 @@ import (
 	"testing"
 )
 
-// 这个测试文件声明的是 package calc，和被测代码同包，
-// 所以可以直接调用小写的 helper。app 包就做不到这件事。
+// 这个测试文件声明的是 package identity，和被测代码同包，
+// 所以可以直接调用小写的 helper。identity 包就做不到这件事。
 func TestHelperIsVisibleInsideThePackage(t *testing.T) {
 	if got := helper(21); got != 42 {
 		t.Fatalf("helper(21) = %d, want 42", got)
